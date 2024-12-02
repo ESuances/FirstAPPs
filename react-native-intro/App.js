@@ -1,17 +1,14 @@
 import { Text } from "react-native";
 import { SafeAreaView, SafeAreaProvider } from "react-native-safe-area-context";
-import { style } from "./App.style";
+import { style } from "./Components/ProfileCard/Profile.style.js";
 import { TouchableOpacity } from "react-native";
+import { ProfileCard } from "./Components/ProfileCard/PofileCard.jsx";
 
 export default function App() {
   return (
     <SafeAreaProvider>
-      <SafeAreaView>
-        <Text style={style.title}>Hola</Text>
-        <Text style={style.boton}> Sin pedos gano los 60k para 2025</Text>
-        <TouchableOpacity style={style.boton}>
-          <Text>Click me para confirmar!</Text>
-        </TouchableOpacity>
+      <SafeAreaView style={{ flex: 1, justifyContent: "center", padding: 20 }}>
+        <ProfileCard />
       </SafeAreaView>
     </SafeAreaProvider>
   );
