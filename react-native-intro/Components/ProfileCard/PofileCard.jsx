@@ -2,7 +2,7 @@ import { View, Text, Image, TouchableOpacity } from "react-native";
 import { style } from "./Profile.style";
 import AntDesign from "@expo/vector-icons/AntDesign";
 
-export function ProfileCard() {
+export function ProfileCard({ onPressGitHub, onPressLinkedin }) {
   return (
     <View style={style.container}>
       <View style={style.header}>
@@ -19,10 +19,10 @@ export function ProfileCard() {
         </View>
       </View>
       <View style={style.social}>
-        <TouchableOpacity style={style.socialBtn}>
+        <TouchableOpacity onPress={onPressLinkedin} style={style.socialBtn}>
           <AntDesign name="linkedin-square" size={24} color="#0077B5" />
         </TouchableOpacity>
-        <TouchableOpacity style={style.socialBtn}>
+        <TouchableOpacity onPress={onPressGitHub} style={style.socialBtn}>
           <AntDesign name="github" size={24} color="black" />
         </TouchableOpacity>
         <TouchableOpacity style={style.socialBtn}>
